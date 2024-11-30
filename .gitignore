@@ -1,0 +1,11 @@
+.DS_Store
+.snakemake/
+results/
+.nextflow/
+.nf_tmp/
+.nextflow.log
+.nextflow.log*
+.*.swp
+.*.swo
+*.pyc
+*.pyo

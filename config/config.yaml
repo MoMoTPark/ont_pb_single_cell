@@ -1,0 +1,18 @@
+samples: config/samples.tsv
+units: config/units.tsv
+is_segmented: False
+is_pacbio: False
+lib_design: T-12U-16B
+sc_kit: 3prime:v3
+mito_prefix: mt-
+ont_ref:
+mas_primers:
+primers:
+barcode_whitelist:
+ref_mmi:
+ref_fa:
+anno_bed:
+anno_gtf:
+tss:
+polyA_motif:
+polyA_sites:

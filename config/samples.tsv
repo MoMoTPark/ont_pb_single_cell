@@ -1,0 +1,2 @@
+sample_id	name	condition	expected_cells
+sc_ont_mm_tst_dta	single_cell_ont_sra_data	toy_dataset	1000

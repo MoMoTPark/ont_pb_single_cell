@@ -1,0 +1,42 @@
+from snakemake.utils import min_version
+min_version('7.0')
+
+# Include base environment and tools that are required for Snakefile script (e.g., Pandas)
+conda: "envs/global_env.yaml"
+# Import config file so all included scripts have access to config data
+configfile: "config/config.yaml"
+
+include: "rules/commons.smk"
+include: "rules/preprocess.smk"
+include: "rules/barcode_process.smk"
+include: "rules/dedup_mapping.smk"
+include: "rules/pigeon.smk"
+include: "rules/sqanti3.smk"
+include: "rules/quant.smk"
+include: "rules/ont.smk"
+
+if config['is_pacbio']:
+    rule all:
+        input:
+            expand("results/refine/{id}.fltnc.bam", id=samples['sample_id']),
+            expand("results/bcstats/{id}.bcstats.tsv", id=samples['sample_id']),
+            expand("results/bcstats/{id}.knee.png", id=samples['sample_id']),
+            expand("results/classify/{id}_classification.txt", id=samples['sample_id']),
+            expand("results/sqanti3_qc/{id}/{id}_classification.txt", id=samples['sample_id']),
+            expand("results/sqanti3_filter/{id}/{id}_SQANTI3_filter_report.pdf", id=samples['sample_id']),
+            expand("results/pbmm2/{id}.dedup.mapped.miser.corrected.filtered.bam", id=samples['sample_id']),
+            expand("results/gffcompare/{id}.annotated.gtf", id=samples['sample_id']),
+            expand("results/seurat/{id}_sq3/{id}.info.csv", id=samples['sample_id']),
+
+if not config['is_pacbio']:
+    rule all:
+        input:
+            expand("results/{id}/tagged.bam", id=samples['sample_id']),
+            expand("results/pbmm2/{id}.dedup.mapped.miser.corrected.bam", id=samples['sample_id']),
+            expand("results/classify/{id}_classification.txt", id=samples['sample_id']),
+            expand("results/sqanti3_qc/{id}/{id}_classification.txt", id=samples['sample_id']),
+            expand("results/sqanti3_filter/{id}/{id}_SQANTI3_filter_report.pdf", id=samples['sample_id']),
+            expand("results/pbmm2/{id}.dedup.mapped.miser.corrected.filtered.bam", id=samples['sample_id']),
+            expand("results/gffcompare/{id}.annotated.gtf", id=samples['sample_id']),
+            expand("results/fasta/{id}.dedup.mapped.miser.corrected.modified.sorted.ont.fasta", id=samples['sample_id']),
+            expand("results/seurat/{id}_sq3/{id}.info.csv", id=samples['sample_id']),

@@ -1,0 +1,7 @@
+name: lima
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - lima=2.9.0=h9ee0642_1

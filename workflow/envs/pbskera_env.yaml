@@ -1,0 +1,7 @@
+name: pbskera
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - pbskera=1.2.0=hdfd78af_0

@@ -1,0 +1,7 @@
+name: isoseq
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+dependencies:
+  - isoseq=4.0.0=h9ee0642_0
