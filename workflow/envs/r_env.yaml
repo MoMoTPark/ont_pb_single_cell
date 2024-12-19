@@ -16,3 +16,4 @@ dependencies:
   - r-scales
   - r-forcats
   - r-purrr
+  - r-readr
