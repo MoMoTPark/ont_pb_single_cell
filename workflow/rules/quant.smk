@@ -1,3 +1,9 @@
+# Author: Moe Zardbani
+# Quantify reads based on the filtered results from SQANTI3 Filter output
+# convert_sq3_output: Modify SQNATI3 Filter classification outptu to make it compatible as 
+# input for make_seurat requires additional columns in the classification file.
+# make_seurat: Quantify using pigeon PacBio quantitation toolkit.
+
 # Make SQANTI3 filtered classification output compatible with make-seurat
 rule convert_sq3_output:
     input: 

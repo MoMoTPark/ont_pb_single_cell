@@ -1,3 +1,6 @@
+# Author: Moe Zardbani
+# Script for helper functions and I/O handling utilities
+
 import pandas as pd
 
 samples = pd.read_table(config['samples'], sep="\t").set_index("sample_id", drop=False)

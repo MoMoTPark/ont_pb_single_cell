@@ -10,9 +10,9 @@ This pipeline can be used to automate the processing of single-cell RNA-seq data
 
 #### How to run
 
-The pipeline's layout has been designed around Snakemake recommended best practices [Snakemake.readthedocs.io](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html). To that extend, any supplied input file and resource to the pipeline can be provided as described below (note that all config inputs are mandatory):
+The pipeline's layout has been designed around Snakemake recommended best practices [Snakemake.readthedocs.io](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html). To that extend, any supplied input file and resource to the pipeline can be provided as described below:
 
-- `config/config.yaml`: All inputs are accessible in the pipeline from this config file. This includes reference sequences, annotations and other supplementary input files. Note that there are different supplementary files required for ONT and PacBio data. Hence, input files are tagged with Universal, PB or ONT. Universal and platform specific input files must be supplied for successful execution of the pipeline.
+- `config/config.yaml`: All inputs are accessible in the pipeline from this config file. This includes reference sequences, annotations and other supplementary input files. Note that there are different supplementary files required for ONT and PacBio data. Hence, input files are tagged with Universal, PB or ONT. Universal and platform specific input files must be supplied for successful execution of the pipeline. **Note that a number of config inputs are PacBio or ONT specific and the rest are shared for both pipelines. Input config arguments that are shared between pipelines are mandatory and highlighted as 'Universal'. Pacbio specific inputs are highlighted as 'PB' and ONT specific inputs are highlighted as 'ONT'.**
 
 ```
 # Sample sheet with predefined columns (note that the sample_id for a given input should be the same for sample.tsv and units.tsv) - Universal

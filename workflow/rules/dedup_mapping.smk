@@ -1,5 +1,5 @@
 ## PacBio MAS-Seq/Kinnex scRNA-seq data processing pipeline
-# Author: MoMoTPark
+# Author: Moe Zardbani
 # PART 3
 
 # Workflow description:
