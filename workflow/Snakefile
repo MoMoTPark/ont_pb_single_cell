@@ -26,7 +26,7 @@ if config['is_pacbio']:
             expand("results/sqanti3_filter/{id}/{id}_SQANTI3_filter_report.pdf", id=samples['sample_id']),
             expand("results/pbmm2/{id}.dedup.mapped.miser.corrected.filtered.bam", id=samples['sample_id']),
             expand("results/gffcompare/{id}.annotated.gtf", id=samples['sample_id']),
-            expand("results/seurat/{id}_sq3/{id}.info.csv", id=samples['sample_id']),
+            expand("results/seurat/{id}_sq3/genes_seurat/barcodes.tsv.gz", id=samples['sample_id']),
 
 if not config['is_pacbio']:
     rule all:
