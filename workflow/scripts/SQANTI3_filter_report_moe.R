@@ -57,7 +57,7 @@ if (opt$filter_type == "ml"){
 
 
 # Import pipe operator
-require(magrittr)
+library(magrittr)
 
 
 # Read files in output/input directory
@@ -145,7 +145,7 @@ classif <- classif %>%
 #### Define plot theme ####
 
 # Load ggplot2
-require(ggplot2)
+library(ggplot2)
 
 # Install RColorConesa if not available
 pkg <- installed.packages() %>% rownames
