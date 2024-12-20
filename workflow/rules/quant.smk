@@ -55,8 +55,8 @@ rule compress_quant:
     log: "results/logs/{id}_compress_quant.log"
     benchmark: "results/benchmarks/{id}_compress_quant.benchmark"
     params:
-        genes = "results/seurat/{id}_sq3/genes_seurat/genes.tsv"
-        features = "results/seurat/{id}_sq3/genes_seurat/features.tsv"
+        genes = "results/seurat/{id}_sq3/genes_seurat/genes.tsv",
+        features = "results/seurat/{id}_sq3/genes_seurat/features.tsv",
         zip = "results/seurat/{id}_sq3/genes_seurat/*"
     shell:
         '''
