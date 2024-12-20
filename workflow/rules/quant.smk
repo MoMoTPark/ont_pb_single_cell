@@ -47,3 +47,19 @@ rule make_seurat:
         -d {params.out_dir} \
         {input}
         '''
+
+rule compress_quant:
+    input: "results/seurat/{id}_sq3/{id}.info.csv"
+    output: "results/seurat/{id}_sq3/genes_seurat/barcodes.tsv.gz"
+    conda: "../envs/samtools_env.yaml"
+    log: "results/logs/{id}_compress_quant.log"
+    benchmark: "results/benchmarks/{id}_compress_quant.benchmark"
+    params:
+        genes = "results/seurat/{id}_sq3/genes_seurat/genes.tsv"
+        features = "results/seurat/{id}_sq3/genes_seurat/features.tsv"
+        zip = "results/seurat/{id}_sq3/genes_seurat/*"
+    shell:
+        '''
+        mv {params.genes} {params.features};
+        bgzip {params.zip} 2> {log}
+        '''

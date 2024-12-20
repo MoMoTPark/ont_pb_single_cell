@@ -39,4 +39,4 @@ if not config['is_pacbio']:
             expand("results/pbmm2/{id}.dedup.mapped.miser.corrected.filtered.bam", id=samples['sample_id']),
             expand("results/gffcompare/{id}.annotated.gtf", id=samples['sample_id']),
             expand("results/fasta/{id}.dedup.mapped.miser.corrected.modified.sorted.ont.fasta", id=samples['sample_id']),
-            expand("results/seurat/{id}_sq3/{id}.info.csv", id=samples['sample_id']),
+            expand("results/seurat/{id}_sq3/genes_seurat/barcodes.tsv.gz", id=samples['sample_id']),
