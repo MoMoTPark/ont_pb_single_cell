@@ -17,3 +17,4 @@ dependencies:
   - r-forcats
   - r-purrr
   - r-readr
+  - r-magrittr
