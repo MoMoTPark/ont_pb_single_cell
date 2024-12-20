@@ -147,6 +147,9 @@ classif <- classif %>%
 # Load ggplot2
 library(ggplot2)
 
+# Set CRAN mirror
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+
 # Install RColorConesa if not available
 pkg <- installed.packages() %>% rownames
 
@@ -739,5 +742,3 @@ pdf(file = pdf_file, width = 8, height = 7.5)
 }
 # Close file
 dev.off()
-
-        
