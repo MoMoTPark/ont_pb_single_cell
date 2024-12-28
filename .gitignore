@@ -9,3 +9,5 @@ results/
 .*.swo
 *.pyc
 *.pyo
+*template-workflow
+.nextflow*
