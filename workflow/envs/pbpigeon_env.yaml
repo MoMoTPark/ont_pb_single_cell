@@ -12,4 +12,3 @@ dependencies:
   - libstdcxx=14.2.0=hc0a3c3a_1
   - libstdcxx-ng=14.2.0=h4852527_1
   - pbpigeon=1.2.0=h4ac6f70_0
-prefix: /data/local/rajewsky/home/mzardba/miniforge3/envs/pbpigeon

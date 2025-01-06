@@ -14,4 +14,3 @@ dependencies:
   - libstdcxx-ng=14.1.0=h4852527_1
   - libzlib=1.2.13=h4ab18f5_6
   - zlib=1.2.13=h4ab18f5_6
-prefix: /data/local/rajewsky/home/mzardba/miniforge3/envs/gffread

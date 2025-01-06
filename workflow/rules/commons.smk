@@ -1,4 +1,4 @@
-# Author: Moe Zardbani
+# Author: Moe
 # Script for helper functions and I/O handling utilities
 
 import pandas as pd

@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+# Author: Moe
 # Add a new BAM tag to an input mapped BAM file
 
 import pysam

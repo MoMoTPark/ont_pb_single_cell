@@ -1,3 +1,8 @@
+# Author: Moe
+# ONT specific rules
+# Nextflow pipeline: https://github.com/epi2me-labs/wf-single-cell
+
+# Run Nextflow pipeline for ONT data
 rule ont_pipeline:
     input: lambda wildcards: input_files[wildcards.id]
     output: "results/{id}/tagged.bam"

@@ -180,4 +180,3 @@ dependencies:
   - pip:
       - numpy==1.26.4
       - python-dateutil==2.9.0.post0
-prefix: /data/local/rajewsky/home/mzardba/miniforge3/envs/python

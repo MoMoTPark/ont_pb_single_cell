@@ -29,4 +29,3 @@ dependencies:
   - samtools=1.21=h50ea8bc_0
   - xz=5.2.6=h166bdaf_0
   - zstd=1.5.6=ha6fb4c9_0
-prefix: /data/local/rajewsky/home/mzardba/miniforge3/envs/samtools
